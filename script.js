@@ -4,7 +4,7 @@ const EPOCH = 1667250467
 const XYM_ID = '72C0212E67A08BCE'
 const NODE_URL = 'https://sym-test-03.opening-line.jp:3001'
 const NET_TYPE = symbol.NetworkType.TEST_NET
-const address = symbol.Address.createFromRawAddress("TCRPYAX4AUWTCTKDOJS4LRSNN6EAIZLT552LTRY")
+const address = symbol.Address.createFromRawAddress("TBIFREIWF72G6USU7WFSB2ZRUHBAEUNRMLATSSA")
 console.log("Hello Symbol")
 console.log(`Your Address : ${address.plain()}`)
 
