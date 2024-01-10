@@ -18,6 +18,7 @@ dom_addr.innerText = address.pretty()
 accountHttp.getAccountInfo(address)
   .toPromise()
   .then((accountInfo) => {
+    console.log("acc", accountInfo)
     for (let m of accountInfo.mosaics) {
       console.log("mosaic", m)
       if (m.id.id.toHex() === XYM_ID) {
