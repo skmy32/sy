@@ -57,3 +57,8 @@ transactionHttp.search(searchCriteria)
       dom_txInfo.appendChild(dom_tx)
     }
   })
+
+function getTransactionType(type) {
+  if (type === 16724) return 'TRANSFER TRANSACTION'
+  return 'OTHER TRANSACTION'
+}
