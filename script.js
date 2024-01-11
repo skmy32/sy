@@ -83,7 +83,7 @@ function handleClick(){
     symbol.UInt64.fromUint(2000000)
   )
 
-  const acc = symbol.Account.createFromPriveteKey(pk, NET_TYPE)
+  const acc = symbol.Account.createFromPrivateKey(pk, NET_TYPE)
 
   const signedTx = acc.sign(tx, GENERATION_HASH)
 
