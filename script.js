@@ -89,3 +89,32 @@ function handleClick(){
 
   transactionHttp.announce(signedTx)
 }
+
+function handleSSS() {
+  console.log('handle sss')
+  const addr = document.getElementById('form-addr').value
+  const amount = document.getElementById('form-amount').value
+  const message = document.getElementById('form-message').value
+
+  const tx = symbol.TransferTransaction.create(
+    symbol.Deadline.create(EPOCH),
+    symbol.Address.createFromRawAddress(addr),
+    [
+      new symbol.Mosaic(
+        new symbol.MosaicId(XYM_ID),
+        symbol.UInt64.fromUint(Number(amount))
+      )
+    ],
+    symbol.PlainMessage.create(message),
+    NET_TYPE,
+    symbol.UInt64.fromUint(2000000)
+  )
+
+  window.SSS.setTransaction(tx)
+
+  window.SSS.requestSign().then(signedTx => {
+    console.log('signedTx', signedTx)
+    transactionHttp.announce(signedTx)
+  })
+
+}
